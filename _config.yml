@@ -1,0 +1,6 @@
+# jekyll config
+safe:      true
+
+# custom config
+strap: Wordsmith is a jQuery plug-in that adds on-demand word definitions to your site
+latest_version: 1.0

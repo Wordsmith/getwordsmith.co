@@ -1,0 +1,82 @@
+body {
+	background: #4799df;
+	font-family: "museo-slab",serif;
+	margin-top: 50px;
+	color: #fff;
+}
+
+h2 {
+	font-weight: 300;
+	font-size: 28pt;
+	margin: 10px;
+}
+
+a {
+	text-decoration: underline;
+	color: #fff;
+}
+
+blockquote {
+	display: block;
+	background: #59A3E2;
+	width: 730px;
+	padding: 10px;
+	color: #ffffcc;
+	text-align: left;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+	margin: 0px;
+}
+
+.container {
+	width: 750px;
+	margin: 0px auto;
+	text-align: center;
+}
+
+.footer {
+	font-size: 12pt;
+}
+
+.blue { 
+	color: #0b4d8c;
+}
+
+.left {
+	text-align: left;
+}
+
+p {
+	font-size: 14pt;
+}
+	
+.sep {
+	border-top: 1px solid #3987d4;
+	border-bottom: 1px solid #7db7e8;
+	width: 100%;
+	line-height: 30px;
+}
+
+.pad {
+	padding: 5px 0px 5px 0px;
+}
+
+.download {
+	background: #0b4d8c;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+	padding: 20px 60px 20px 60px;
+	font-weight: 700;
+	display: inline-block;
+	text-decoration: none;
+}
+.download:hover {
+	background: #337ABF;
+}
+
+::selection, ::-moz-selection {
+        background: #ffcc33;
+}
+

@@ -1,4 +1,4 @@
 getwordsmith.co
 ===============
 
-getwordsmith.co site and builder
+The getwordsmith.co site (and builder)
