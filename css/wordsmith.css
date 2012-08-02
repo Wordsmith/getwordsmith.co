@@ -76,7 +76,9 @@ p {
 	background: #337ABF;
 }
 
-::selection, ::-moz-selection {
+::selection {
         background: #ffcc33;
 }
-
+::-moz-selection {
+        background: #ffcc33;
+}
