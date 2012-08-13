@@ -1,0 +1,18 @@
+#!/bin/bash
+
+# bash helper script to pull latest version of Wordsmith jquery plugin
+# and to minify, preserving the version number
+
+# get the latest version of wordsmith.js from master
+wget --output-document downloads/wordsmith.js https://raw.github.com/Wordsmith/wordsmith-plugin/master/wordsmith.js
+
+# minifiy using google closure
+java -jar ../closure/compiler.jar --js=downloads/wordsmith.js --js_output_file=downloads/wordsmith.min.js
+
+# extract out the version from wordsmith.js
+jsver=$(sed -n '2{p;q}' downloads/wordsmith.js)
+jsver=${jsver:3}
+echo $jsver
+
+# prepend the version information into the new minified file
+sed -i "1i /*! $jsver getwordsmith.co | http://getwordsmith.co/license/ */" downloads/wordsmith.min.js
