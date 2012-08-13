@@ -15,9 +15,8 @@ title: Wordsmith
 <hr class="sep" />
 </div>
 
-<p class="title blue left"><b>Seamless integration:</b> Wordsmith is easily added to your existing web page by including jQuery, the Wordsmith javascript file and then by simply calling the Wordsmith plugin with the selector(s) you wish to attach Wordsmith to:</p>
+<p class="title blue left"><b>Seamless integration:</b> Wordsmith is easily added to your existing web page by including jQuery, the Wordsmith javascript file and then by simply calling the Wordsmith plug-in with the selector(s) you wish to attach Wordsmith to:</p>
 
-<div>
 <blockquote>
 {% highlight javascript %}
 
@@ -27,7 +26,6 @@ $(function() {
 
 {% endhighlight %}
 </blockquote>
-</div>
 
 <div class="pad">
 <hr class="sep" />
@@ -40,3 +38,71 @@ $(function() {
 <b>Also available:</b> <a href="/downloads/wordsmith.js">Un-minified version of Wordsmith</a>
 </div>
 
+<div class="pad">
+<hr class="sep" />
+</div>
+
+<p class="title blue left"><b>Plug-in Options:</b> Wordsmith defaults can be customised with the following options:</p>
+
+<div class="option">
+<div class="name">maxWordLength</div>
+<div class="default">18</div>
+<div class="desc">Defines the maximum length of a highlighted word that Wordsmith will attempt a word definition lookup for. If the highlighted or selected word exceeds this amount the Wordsmith lookup icon will not be shown.</div>
+</div>
+
+<div class="option">
+<div class="name">popupWidth</div>
+<div class="default">600</div>
+<div class="desc">Sets the width for the Wordsmith word definition popup when displayed.</div>
+</div>
+
+<div class="option">
+<div class="name">popupHeight</div>
+<div class="default">400</div>
+<div class="desc">Sets the height for the Wordsmith word definition popup when displayed.</div>
+</div>
+
+<div class="option">
+<div class="name">lookupImage</div>
+<div class="default">http://getwordsmith.co/images/Question_Mark.png</div>
+<div class="desc">Sets the icon image that appears when a word is highlighted or selected that the user clicks on to see the word definition popup box.</div>
+</div>
+
+<div class="option">
+<div class="name">lookupMessage</div>
+<div class="default">Lookup definition</div>
+<div class="desc">Sets the tooltip text for the lookup icon image that is shown when a word is highlighted or selected.</div>
+</div>
+
+<div class="option">
+<div class="name">lookupUrl</div>
+<div class="default">http://define.getwordsmith.co/{word}</div>
+<div class="desc">Sets the remote URL to the server that will provide word definition lookups for the selected or highlighted word. The definition is shown in the Wordsmith popup. The {word} variable will be replaced with the actual word being looked up.</div>
+</div>
+
+<p class="title blue left">Example of changing Wordsmith options:</p>
+
+<blockquote>
+{% highlight javascript %}
+
+// example of using options to change Wordsmith defaults
+$(function() {
+	$('.container').wordsmith({
+		maxWordLength: 20, 
+		popupWidth: 700, 
+		popupHeight: 450, 
+		lookupImage: 'http://placehold.it/28x28', 
+		lookupMessage: 'Click to lookup this word definition',
+		lookupUrl: 'http://mywordlookupserver.com/{word}'
+	});
+});
+
+{% endhighlight %}
+</blockquote>
+
+<div class="pad">
+<hr class="sep" />
+</div>
+
+<p class="title blue left"><b>Wordsmith Word Definition Server</b>: The word definiton server is a simple Sinatra based implementation that uses the <a href="http://http://developer.wordnik.com/">Wordnik API</a>. You can learn more about Wordnik <a href="http://www.wordnik.com">here</a> and get the source code for the Wordsmith word definition server from our <a href="https://github.com/Wordsmith">GitHub page</a>. You will need to obtain your own Wordnik API key before you can use the server.
+</p>

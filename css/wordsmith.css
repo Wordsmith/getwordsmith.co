@@ -7,7 +7,7 @@ body {
 
 h2 {
 	font-weight: 300;
-	font-size: 28pt;
+	font-size: 28px;
 	margin: 10px;
 }
 
@@ -16,7 +16,7 @@ a {
 	color: #fff;
 }
 
-blockquote {
+.option, blockquote {
 	display: block;
 	background: #59A3E2;
 	width: 730px;
@@ -36,11 +36,18 @@ blockquote {
 }
 
 .footer {
-	font-size: 12pt;
+	font-size: 16px;
 }
 
 .blue { 
 	color: #0b4d8c;
+}
+
+.blue A { 
+	color: #0b4d8c;
+}
+.blue A:hover { 
+	color: #337ABF;
 }
 
 .left {
@@ -48,7 +55,7 @@ blockquote {
 }
 
 p {
-	font-size: 14pt;
+	font-size: 20px;
 }
 	
 .sep {
@@ -81,4 +88,29 @@ p {
 }
 ::-moz-selection {
         background: #ffcc33;
+}
+
+.option {
+	text-align: left;
+	margin-bottom: 20px;
+}
+
+.option .name {
+	font-size: 18px;
+	font-weight: bold;
+	margin-bottom: 6px;
+}
+
+.option .default {
+	font-style: italic;
+	color: #0b4d8c;
+}
+
+.option .default:before {
+	content: "Default: ";
+	color: #0b4d8c;
+}
+
+.option .desc:before {
+	content: "Description: ";
 }
