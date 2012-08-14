@@ -20,7 +20,7 @@ a {
 	font-weight: normal;
 }
 
-.option, code {
+.option, pre {
 	display: block;
 	background: #59A3E2;
 	width: 730px;
