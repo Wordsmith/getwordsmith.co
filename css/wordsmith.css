@@ -1,8 +1,11 @@
 body {
 	background: #4799df;
-	font-family: "museo-slab",serif;
 	margin-top: 50px;
 	color: #fff;
+}
+
+* { 
+	font-family: "museo-slab",serif; 
 }
 
 h2 {
