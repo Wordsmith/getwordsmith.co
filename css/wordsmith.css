@@ -16,7 +16,11 @@ a {
 	color: #fff;
 }
 
-.option, blockquote {
+.normal {
+	font-weight: normal;
+}
+
+.option, code {
 	display: block;
 	background: #59A3E2;
 	width: 730px;
@@ -27,6 +31,7 @@ a {
 	-moz-border-radius: 6px;
 	border-radius: 6px;
 	margin: 0px;
+	overflow: hidden;
 }
 
 .container {
@@ -58,15 +63,15 @@ p {
 	font-size: 20px;
 }
 	
-.sep {
-	border-top: 1px solid #3987d4;
-	border-bottom: 1px solid #7db7e8;
-	width: 100%;
-	line-height: 30px;
+hr {
+	margin: 20px 0px 20px 0px;
+	height: 2px;
+	background-image: url('/images/separator.png');
+	border: 0;
 }
 
 .pad {
-	padding: 5px 0px 5px 0px;
+	padding: 5px 0px 5px 0px;	
 }
 
 .download {

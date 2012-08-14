@@ -5,19 +5,16 @@ title: Wordsmith
 
 <h2 class="center">{{site.strap}}</h2>
 
-<div class="pad">
-<hr class="sep" />
-</div>
+<hr />
 
-<p class="title"><b>See it in action:</b> Double click on any word on this page</p>
+<h3>See it in action: <span class="normal">Double click on any word on this page</span>
+</h3>
 
-<div class="pad">
-<hr class="sep" />
-</div>
+<hr />
 
-<p class="title blue left"><b>Seamless integration:</b> Wordsmith is easily added to your existing web page by including jQuery, the Wordsmith javascript file and then by simply calling the Wordsmith plug-in with the selector(s) you wish to attach Wordsmith to:</p>
+<h3 class="blue left">Seamless integration: <span class="normal">Wordsmith is easily added to your existing web page by including jQuery, the Wordsmith javascript file and then by simply calling the Wordsmith plug-in with the selector(s) you wish to attach Wordsmith to:</span>
+</h3>
 
-<blockquote>
 {% highlight javascript %}
 
 $(function() {
@@ -25,24 +22,20 @@ $(function() {
 });
 
 {% endhighlight %}
-</blockquote>
+
+<hr />
 
 <div class="pad">
-<hr class="sep" />
-</div>
-
-<div class="pad">
-<a class="download" href="/downloads/wordsmith.min.js">Download Wordsmith</a>
+<a class="download" href="/downloads/wordsmith.min.pjs">Download Wordsmith</a>
 </div>
 <div class="pad">
 <b>Also available:</b> <a href="/downloads/wordsmith.js">Un-minified version of Wordsmith</a>
 </div>
 
-<div class="pad">
-<hr class="sep" />
-</div>
+<hr />
 
-<p class="title blue left"><b>Plug-in Options:</b> Wordsmith defaults can be customised with the following options:</p>
+<h3 class="blue left">Plug-in Options: <span class="normal">Wordsmith defaults can be customised with the following options:</span>
+</h3>
 
 <div class="option">
 <div class="name">maxWordLength</div>
@@ -77,14 +70,13 @@ $(function() {
 <div class="option">
 <div class="name">lookupUrl</div>
 <div class="default">http://define.getwordsmith.co/{word}</div>
-<div class="desc">Sets the remote URL to the server that will provide word definition lookups for the selected or highlighted word. The definition is shown in the Wordsmith popup. The {word} variable will be replaced with the actual word being looked up.</div>
+<div class="desc">Sets the remote URL to the server that will provide word definition lookups for the selected or highlighted word. The definition is shown in the Wordsmith popup. The {word} token will be replaced with the actual word being looked up.</div>
 </div>
 
-<p class="title blue left">Example of changing Wordsmith options:</p>
+<h3 class="blue left">Example of changing Wordsmith options:</h3>
 
-<blockquote>
 {% highlight javascript %}
-lesscss.org
+
 // example of using options to change Wordsmith defaults
 $(function() {
 	$('.container').wordsmith({
@@ -98,11 +90,8 @@ $(function() {
 });
 
 {% endhighlight %}
-</blockquote>
 
-<div class="pad">
-<hr class="sep" />
-</div>
+<hr />
 
-<p class="title blue left"><b>Wordsmith Word Definition Server</b>: The word definiton server is a simple Sinatra based implementation that uses the <a href="http://developer.wordnik.com/">Wordnik API</a>. You can learn more about Wordnik <a href="http://www.wordnik.com">here</a> and get the source code for the Wordsmith word definition server from our <a href="https://github.com/Wordsmith">GitHub page</a>. You will need to obtain your own Wordnik API key before you can use the server.
-</p>
+<h3 class="blue left">Wordsmith Word Definition Server: <span class="normal">The word definiton server is a simple Sinatra based implementation that uses the <a href="http://developer.wordnik.com/">Wordnik API</a>. You can learn more about Wordnik <a href="http://www.wordnik.com">here</a> and get the source code for the Wordsmith word definition server from our <a href="https://github.com/Wordsmith">GitHub page</a>. You will need to obtain your own Wordnik API key before you can use the server.</span>
+</h3>
