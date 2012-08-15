@@ -1,0 +1,13 @@
+# minifiy using google closure
+java -jar ../closure/compiler.jar --js=downloads/wordsmith.js --js_output_file=downloads/wordsmith.min.js
+
+# extract out the version from wordsmith.js
+jsver=$(sed -n '2{p;q}' downloads/wordsmith.js)
+jsver=${jsver:14}
+echo $jsver
+
+# prepend the version information into the new minified file
+sed -i "1i /*! Wordsmith $jsver getwordsmith.co | http://getwordsmith.co/license/ */" downloads/wordsmith.min.js
+
+# update jekyll site to latest version
+sed -i "s/latest_version: .*/latest_version: $jsver/" _config.yml

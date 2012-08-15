@@ -1,9 +1,10 @@
-/*
- * Wordsmith v1.0
+/* 
+ * Wordsmith v1.01
  * getwordsmith.co
  *
  * Copyright (c) Rich Hollis, Jess Eddy 2012
  * Available under the BSD and MIT licenses: http://getwordsmith.co/license/
+ *
  */
 (function($) {
      var $question, lastSelection, settings;
@@ -26,6 +27,9 @@
           $(document).on("mouseup", function(event) {
                mouseUpBody();
           });
+          $(document).scroll(function(event) {
+               mouseUpBody();
+          });
           this.on("mouseup", function(event) {
                mouseUp(event)
           });
@@ -45,7 +49,7 @@
           if (window.getSelection) {
                if (window.getSelection().empty) { // Chrome
                     window.getSelection().empty();
-               } else if (window.getSelection().reappNamemoveAllRanges) { // Firefox
+               } else if (window.getSelection().removeAllRanges) { // Firefox
                     window.getSelection().removeAllRanges();
                }
           } else if (document.selection) { // IE?
@@ -104,6 +108,7 @@
 
                var x = $span.offset().left;
                var y = $span.offset().top;
+               var scrollTop = $(window).scrollTop();
 
                if (lastSelection) {
                     if (lastSelection.x == x && lastSelection.y == y) {
@@ -115,7 +120,7 @@
 
                remove();
 
-               var style = "margin: 0; padding: 0; position: absolute" + "; width: " + lookupImage.width + "; height: " + lookupImage.height;
+               var style = "margin: 0; padding: 0; position: fixed" + "; width: " + lookupImage.width + "; height: " + lookupImage.height;
                $question = $('<div id="' + appName + '-question" style="' + style + '"><a href="#" id="' + appName + '-lookup" title="' + settings.lookupMessage + '"><img src="' + settings.lookupImage + '"/></a></div>');
 
                lastSelection = {
@@ -126,7 +131,7 @@
 
                $span.parent().append($question[0]);
 
-               // prevent us from being removed by body mouseupatt
+               // prevent us from being removed by BODY mouseup
                $('#' + appName + '-lookup').on("mousedown", function(event) {
                     wordsmithSelectorClick = true;
                     event.preventDefault();
@@ -135,7 +140,7 @@
 
                $question.css({
                     left: x - (lookupImage.width / 1.5),
-                    top: y - (lookupImage.height / 1.5)
+                    top: y - (lookupImage.height / 1.5) - scrollTop
                });
                $span.remove();
 

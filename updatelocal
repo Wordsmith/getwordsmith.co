@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# get the latest version of wordsmith.js from local repo
+cp ../wordsmith-plugin/wordsmith.js downloads/wordsmith.js
+
+# minify, update version numbers
+./postupdate
