@@ -21,7 +21,7 @@
                'popupHeight': 400,
                'lookupImage': "http://getwordsmith.co/images/Question_Mark.png",
                'lookupMessage': "Lookup definition",
-               'lookupUrl': "http://define.getwordsmith.co/" + wordSymbol
+               'lookupUrl': "https://en.wikipedia.org/wiki/" + wordSymbol
           }, options);
 
           $(document).on("mouseup", function(event) {
